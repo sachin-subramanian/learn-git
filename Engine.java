@@ -60,6 +60,13 @@ this.board[row][col] = this.symbols[player];
   // Return true if the board is full
   // Return false if not
   public boolean checkTie() {
+    for (int row = 0; row < BOARD_SIZE; row++) {
+      for(int col = 0; col < BOARD_SIZE; col++) {
+        if (this.board[row][col] == " ") {
+          return false;
+        }
+      }
+    }
     return true;
   }
 
